@@ -8,7 +8,16 @@
   <body>
     <div class="container">
       <h1>Templates in Projects</h1>
-      <ul id="mapResult"></ul>
+      <ul id="mapResult">
+          <li>Item1</li>
+          <li>Item2</li>
+          <li>Item3</li>
+          <li>Item4</li>
+      </ul>
+      <ul>
+        <li>OtherList1</li>
+        <li>OtherList2</li>
+      </ul>
     </div>
     <script>
       'use strict'
@@ -40,6 +49,9 @@
       {'project': 'Meteor', 'template': 'Handlebars'},
       {'project': 'TRSCMS (Chinese)', 'template': 'TRSXML'}
     ];
+    console.log(typeof match_table);
+    console.log(document.querySelectorAll("li").length);
+    console.log('Object.keys()', Object.keys(document.querySelectorAll("li")));
     
     // count project number by template
     var templateMap = new Map();
@@ -58,14 +70,14 @@
     
     //console.log(templateMap);
     var type = typeof templateMap;
-    console.log(templateMap)
-    console.log(type);
+    //console.log(templateMap)
+    //console.log(type);
     for (let prop in templateMap) {
-      console.log(templateMap[prop]);
+      //console.log(templateMap[prop]);
     }
     //*/
     templateMap.forEach(function(item) {
-      console.log(item);
+      //console.log(item);
     });
     
     
