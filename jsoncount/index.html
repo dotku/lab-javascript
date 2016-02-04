@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <title>Templates in Projects</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Templates in Projects</h1>
+      <ul id="mapResult"></ul>
+    </div>
+    <script>
+      'use strict'
+      /*
+     var projects = [
+      {'name': 'Laveral'},
+      {'name': 'Express'},
+      {'name': 'ThinkPHP (Chinese)'},
+      {'name': 'Ruby on Rails'},
+      {'name': 'Ember.js'},
+      {'name': 'Meteor'},
+      {'name': 'TRSCMS (Chinese)'}
+    ];
+
+    var templates = [
+      {'name': 'Blade'},
+      {'name': 'Jade'},
+      {'name': 'ThinkTemplate'},
+      {'name': 'HAML'},
+      {'name': 'Handlebars'}
+    ];
+    */
+    var match_table = [
+      {'project': 'Laveral', 'template': 'Blade'},
+      {'project': 'Express', 'template': 'Jade'},
+      {'project': 'ThinkPHP (Chinese)', 'template': 'ThinkTemplate'},
+      {'project': 'Ruby on Rails', 'template': 'HAML'},
+      {'project': 'Ember.js', 'template': 'Handlebars'},
+      {'project': 'Meteor', 'template': 'Handlebars'},
+      {'project': 'TRSCMS (Chinese)', 'template': 'TRSXML'}
+    ];
+    
+    // count project number by template
+    var templateMap = new Array();
+    match_table.forEach(function(listItem){
+      var template = listItem['template'];
+      if (!templateMap[template]) {
+        templateMap[template] = new Object();
+      }
+      templateMap[template]['name'] = template;
+      if (templateMap[template]['count']) {
+        templateMap[template]['count']++;
+      } else {
+        templateMap[template]['count'] = 1;
+      }
+    });
+    
+    //console.log(templateMap);
+    
+    for (let value in templateMap) {
+      //console.log(value);
+    }
+    //*/
+    templateMap.forEach(function(item) {
+      console.log(item);
+    });
+    
+    
+    // output report
+    /*
+    var sHTML = '';
+    for (let value of templateMap) {
+      console.log(value);
+      //sHTML += '<li>' + value['name'] + ': ' + value['count'] + '</li>';
+    }
+    document.getElementById('mapResult').innerHTML = sHTML;
+    */
+    //console.log(sHTML);
+    </script>
+  </body>
+</html>
