@@ -42,7 +42,7 @@
     ];
     
     // count project number by template
-    var templateMap = new Array();
+    var templateMap = new Map();
     match_table.forEach(function(listItem){
       var template = listItem['template'];
       if (!templateMap[template]) {
@@ -57,9 +57,11 @@
     });
     
     //console.log(templateMap);
-    
-    for (let value in templateMap) {
-      //console.log(value);
+    var type = typeof templateMap;
+    console.log(templateMap)
+    console.log(type);
+    for (let prop in templateMap) {
+      console.log(templateMap[prop]);
     }
     //*/
     templateMap.forEach(function(item) {

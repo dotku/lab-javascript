@@ -1,0 +1,35 @@
+<script>
+'use strict'
+
+var match_table = [
+  {'project': 'Laveral', 'template': 'Blade'},
+  {'project': 'Ember.js', 'template': 'Handlebars'},
+  {'project': 'Meteor', 'template': 'Handlebars'},
+];
+
+// count project number by template
+var templateMap = new Array();
+match_table.forEach(function(listItem){
+  var template = listItem['template'];
+  if (!templateMap[template]) {
+    templateMap[template] = new Object();
+  }
+  templateMap[template]['name'] = template;
+  if (templateMap[template]['count']) {
+    templateMap[template]['count']++;
+  } else {
+    templateMap[template]['count'] = 1;
+  }
+});
+
+//console.log(templateMap);
+
+// for loop fails
+for (let value of templateMap) {
+  console.log(value);
+}
+
+templateMap.forEach(function(item) {
+  console.log(item);
+})
+</script>

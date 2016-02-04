@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <title>Loop</title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/lib/dotku/dist/css/general-cn.css" rel="stylesheet"/>
+    <script src="/lib/angular/angular.js"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loop</h1>
+      <p>2015 年推出的 JavaScript EC6 在 Loop 方面有一些添增功能，比如处理 Object 的 let in 和 处理 Array 
+      的 let of 的增加，不少功能包括主流浏览器 IE 11 在内的都未必支持，所以就在自己的个人项目中使用吧。</p>
+      <div class="clearfix">
+        <div class="pull-right">
+          <dl>
+            <dt class="sr-only">Author Name</dt>
+            <dd>Weijing Jay Lin</dd>
+            <dt class="sr-only">Date</dt>
+            <dd>Feb. 03, 2016</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <script>
+    'use strict'
+    let iterable = [
+      {'project': 'Laveral', 'template': 'Blade'},
+      {'project': 'Express', 'template': 'Jade'},
+      {'project': 'ThinkPHP (Chinese)', 'template': 'ThinkTemplate'},
+      {'project': 'Ruby on Rails', 'template': 'HAML'},
+      {'project': 'Ember.js', 'template': 'Handlebars'},
+      {'project': 'Meteor', 'template': 'Handlebars'},
+      {'project': 'TRSCMS (Chinese)', 'template': 'TRSXML'}
+    ];
+
+    for (let value of iterable) {
+      console.log(value.project);
+    }
+    </script>
+  </body>
+</html>

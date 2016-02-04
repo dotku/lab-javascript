@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <title>Var vs Let</title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/lib/dotku/dist/css/general-cn.css" rel="stylesheet"/>
+    <script src="/lib/angular/angular.js"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Var vs Let</h1>
+      <p>`var` 和 `let` 通常没有什么不同，不过在 loop 中，这两个就有不一样的效果了。</p>
+<pre>&lt;script&gt;
+  'use strict'; // 使用 let 必须用 use strict 模式
+  for( let tuce = 0; tuce &lt; 5; tuce++ ) {
+    //tuce is only visible in here (and in the for() parentheses)
+  };
+  console.log(tuce); // tuce is not defined
+  for( var tuce = 0; tuce &lt; 5; tuce++ ) {
+    //tuce is only visible in here (and in the for() parentheses)
+  };
+  console.log(tuce); // 5
+&lt;/script&gt;</pre>
+  <p>通常情况下，let 都是 let ... in 和 let ... of 这样的组合，let-in 用于 Object，let-of 用于 Array。</p>
+    <div class="clearfix">
+      <div class="pull-right">
+        <dl>
+          <dt class="sr-only">Author Name</dt>
+          <dd>Weijing Jay Lin</dd>
+          <dt class="sr-only">Date</dt>
+          <dd>Feb. 03, 2016</dd>
+        </dl>
+      </div>
+    </div>
+    
+    </div>
+  </body>
+</html>
