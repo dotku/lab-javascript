@@ -2,3 +2,6 @@
 
 ## Reference
 http://amiyasahu.com/
+
+## Related Projects
+- [lab-angularjs]
