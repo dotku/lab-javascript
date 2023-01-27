@@ -1,7 +1,8 @@
-#lab-javascript
+# Lab Javascript
 
 ## Reference
-http://amiyasahu.com/
+http://amiyasahu.com
+https://medium.com/geekculture
 
 ## Related Projects
 JavaScript 近年来发展很快，Node.js 的出现，带动了整个 JavaScript 
